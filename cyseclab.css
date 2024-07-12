@@ -1,0 +1,117 @@
+/* vim: set sw=2: */
+
+/* @theme cyseclab */
+
+@import 'default';
+
+section {
+  --blue: #1183d1;
+
+  width: 960px;
+  height: 720px;
+  display: block;
+  font-family: Calibri, sans-serif;
+}
+
+section::after {
+  bottom: 14px;
+  left: 0;
+  width: 100%;
+  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+  line-height: 1;
+  text-align: center;
+}
+
+section h1::before {
+  position: fixed;
+  bottom: 5px;
+  left: 9px;
+  width: 129px;
+  height: 44px;
+  background-image: url('https://github.com/kanglib/marp-cyseclab/raw/main/assets/kaist.png');
+  background-size: 129px 44px;
+  content: '';
+}
+
+section h1::after {
+  position: fixed;
+  bottom: 12px;
+  right: 22px;
+  width: 129px;
+  height: 28px;
+  background-image: url('https://github.com/kanglib/marp-cyseclab/raw/main/assets/cyseclab.png');
+  background-size: 129px 28px;
+  content: '';
+}
+
+/* -------------------------------------------------------------------------- */
+
+section.lead::after {
+  visibility: hidden;
+}
+
+section.lead h1 {
+  position: fixed;
+  bottom: 373px;
+  left: 7.5%;
+  width: 85%;
+  color: var(--blue);
+  font-size: 60pt;
+  line-height: 1.09;
+  text-align: center;
+}
+
+section.lead p {
+  position: fixed;
+  top: 449px;
+  left: 12.5%;
+  width: 75%;
+  font-size: 24pt;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+
+section:not([class]) {
+  padding: 3.95cm 2cm;
+}
+
+section:not([class])::before {
+  position: fixed;
+  top: 121px;
+  left: 66px;
+  width: 828px;
+  height: 4px;
+  background: var(--blue);
+  content: '';
+}
+
+section:not([class]) h1 {
+  position: fixed;
+  top: 53px;
+  left: 76px;
+  color: var(--blue);
+  font-size: 36pt;
+}
+
+section:not([class]) ol,
+section:not([class]) ul {
+  padding-left: 1em;
+}
+
+/* -------------------------------------------------------------------------- */
+
+section.trail::after {
+  visibility: hidden;
+}
+
+section.trail h1 {
+  position: fixed;
+  top: 295px;
+  left: 0%;
+  width: 100%;
+  color: var(--blue);
+  font-size: 66pt;
+  line-height: 1.09;
+  text-align: center;
+}
