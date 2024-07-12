@@ -20,6 +20,11 @@ section::after {
   content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
   line-height: 1;
   text-align: center;
+  z-index: -1;
+}
+
+section h1 {
+  z-index: -1;
 }
 
 section h1::before {
